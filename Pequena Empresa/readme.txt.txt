@@ -1,0 +1,1 @@
+Nesta parte será usado mais ambiente online, ou pode ser usado no excel mesmo
