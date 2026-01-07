@@ -8,10 +8,11 @@ def create_db_connection():
 
     try:
         conn = psycopg2.connect(
-            host="192.168.3.1",
-            database="postgres",
-            user="postgres",
-            password="159753"
+            host=host,
+            database=database,
+            user=users,
+            password=password,
+            port=
         )
         print("Conexão bem-sucedida ao banco de dados PostgreSQL")
     except Exception as e:
