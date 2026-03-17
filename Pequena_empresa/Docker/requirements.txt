@@ -1,0 +1,10 @@
+sqlalchemy
+pandas
+openpyxl     
+psycopg2-binary
+numpy
+python-dotenv
+supabase
+postgrest
+pydantic<2.10
+pydantic-core
