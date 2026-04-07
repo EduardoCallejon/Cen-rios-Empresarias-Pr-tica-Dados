@@ -1,2 +1,7 @@
 .env
-logs
+venv/
+tmp/
+__pycache__/
+*.pyc
+dagster_home/
+

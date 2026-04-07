@@ -1,9 +1,16 @@
-# 1. Definimos a imagem base (oficial do Airflow)
-FROM apache/airflow:2.7.1
+FROM python:3.11-slim
 
-# 2. Copiamos o nosso arquivo de requisitos para dentro do container
-COPY requirements.txt /requirements.txt
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/opt/dagster/app
 
-# 3. Instalamos as bibliotecas do requirements.txt
-# Usamos o --no-cache-dir para manter a imagem leve
-RUN pip install --no-cache-dir -r /requirements.txt
+WORKDIR /opt/dagster/app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["dagster-webserver", "-h", "0.0.0.0", "-p", "3000", "-w", "workspace.yaml"]
