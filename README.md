@@ -1,8 +1,8 @@
-## Simulação arquitetura de dados Cenários de Empresas
+# Simulação arquitetura de dados Cenários de Empresas
 
 Para esse projeto desmenbrei em 3 cenários {Pequena, Média, Grande empresa}
 
-# Pequena empresa
+## Pequena empresa
 Para esse projeto fui utilizado as seguintes ferramentas:
 - Vscode
 - Bibliotecas estão no requeriments
@@ -13,7 +13,7 @@ Para iniciar o projeto é necessário entender em que nível se encontra, se já
 
 Montei um banco de dados simualção simulando os dados transacionais da empresa utilizando o site "SUPABASE"
 
-# Imagem
+## Imagem
 
 Análise de dados da empresa 📊
 
@@ -26,7 +26,8 @@ Escolha da arquitetura 🧠
 
 A estack utilizada será local como o cliente tem uma máquina que suporta essa arquitetura.
 
-# Imagem da arquitetura
+<img src="https://github.com/EduardoCallejon/Cen-rios-Empresarias-Pr-tica-Dados/blob/segundo/Gemini_Generated_Image_rqbv7grqbv7grqbv%20(1).png" alt="Texto Alternativo" width="500">
+
 
 
 
