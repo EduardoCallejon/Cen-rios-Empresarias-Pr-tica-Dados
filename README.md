@@ -26,9 +26,7 @@ Escolha da arquitetura 🧠
 
 A estack utilizada será local como o cliente tem uma máquina que suporta essa arquitetura.
 
-<img src="https://github.com/EduardoCallejon/Cen-rios-Empresarias-Pr-tica-Dados/blob/segundo/Gemini_Generated_Image_rqbv7grqbv7grqbv%20(1).png" alt="Texto Alternativo" width="500">
+<div align= "center">
 
-
-
-
-
+<img width="1648" height="640" alt="Image" src="https://github.com/user-attachments/assets/68193a25-5125-4dec-815a-64f01606b51a" />
+</div>
