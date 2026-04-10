@@ -46,10 +46,13 @@ Com tudo isso concluído, chegou a hora de orquestrar isso tudo, que nada mais �
 
 Conclusão 🚩
 
-Após todo esses processos, podemos assegurar que os dados chegarão de forma correta ao seu destino, e só assim iremos para a criação do dashboard que dará insights valiosos para para está analisando. 
+Após todo esses processos, podemos assegurar que os dados chegarão de forma correta ao seu destino, e só assim iremos para a criação do dashboard que dará insights valiosos para analise.
 
 <div align="Center">
 <img width="600px" height="600px" alt="Image" src="https://github.com/user-attachments/assets/0c27c26a-0905-4cfd-8c8d-05b40c0741ce" />
 <img width="500px" height="500px" alt="Image" src="https://github.com/user-attachments/assets/f765ef4f-2c42-41db-8e70-5cc2a11cffd1" />
 <img width="500px" height="500px" alt="Image" src="https://github.com/user-attachments/assets/858582e5-26e1-4d79-8a4a-3110a0cc5cac" />
 </div>
+
+## Media_empresa (Em projeto)
+## Grande_empresa (Em projeto)
