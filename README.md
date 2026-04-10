@@ -1,6 +1,6 @@
 # Simulação arquitetura de dados Cenários de Empresas
 
-Para esse projeto desmenbrei em 3 cenários {Pequena, Média, Grande empresa}
+Para esse projeto desmembrei em 3 cenários {Pequena, Média, Grande empresa}
 
 ## Pequena empresa
 Para esse projeto fui utilizado as seguintes ferramentas:
@@ -13,7 +13,9 @@ Para iniciar o projeto é necessário entender em que nível se encontra, se já
 
 Montei um banco de dados simualção simulando os dados transacionais da empresa utilizando o site "SUPABASE"
 
-## Imagem
+<div align= "center">
+<img width="500px" height="600" alt="Image" src="https://github.com/user-attachments/assets/f885c3a5-9c3b-4e42-b6e0-54d765297677" />
+</div>
 
 Análise de dados da empresa 📊
 
@@ -27,6 +29,5 @@ Escolha da arquitetura 🧠
 A estack utilizada será local como o cliente tem uma máquina que suporta essa arquitetura.
 
 <div align= "center">
-
-<img width="860" height="640" alt="Image" src="https://github.com/user-attachments/assets/68193a25-5125-4dec-815a-64f01606b51a" />
+<img width="500px" height="600" alt="Image" src="https://github.com/user-attachments/assets/68193a25-5125-4dec-815a-64f01606b51a" />
 </div>
