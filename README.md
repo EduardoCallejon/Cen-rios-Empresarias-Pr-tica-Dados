@@ -28,5 +28,5 @@ A estack utilizada será local como o cliente tem uma máquina que suporta essa 
 
 <div align= "center">
 
-<img width="1648" height="640" alt="Image" src="https://github.com/user-attachments/assets/68193a25-5125-4dec-815a-64f01606b51a" />
+<img width="860" height="640" alt="Image" src="https://github.com/user-attachments/assets/68193a25-5125-4dec-815a-64f01606b51a" />
 </div>
