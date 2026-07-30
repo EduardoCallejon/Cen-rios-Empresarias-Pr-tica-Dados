@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="lenis-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ativer Projetos e Soluções: Especialista em Automação Industrial, Projetos de Engenharia, Sistemas Supervisórios, CLPs e Estações de Tratamento de Água (ETA) e Efluentes (ETE). Inovação e máxima eficiência operacional.">
+  <meta name="keywords" content="automação industrial, projetos de engenharia, sistemas supervisórios, clp, painéis elétricos, ETA, ETE, tratamento de água, efluentes, Ativer, inovação tecnológica, engenharia de processos">
+  <meta name="author" content="Ativer Projetos e Soluções">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ativer.com.br/">
+  <meta property="og:title" content="Ativer | Engenharia, Automação Industrial e Tratamento de Água (ETA/ETE)">
+  <meta property="og:description" content="Transformamos Engenharia em Soluções Inteligentes. Automação de alta tecnologia, projetos de engenharia integrados e estações sustentáveis de tratamento de água e efluentes.">
+  <meta property="og:image" content="assets/images/images.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ativer.com.br/">
+  <meta property="twitter:title" content="Ativer | Engenharia, Automação Industrial e Tratamento de Água">
+  <meta property="twitter:description" content="Transformamos Engenharia em Soluções Inteligentes. Automação de alta tecnologia, projetos de engenharia integrados e estações sustentáveis de tratamento de água e efluentes.">
+  <meta property="twitter:image" content="assets/images/images.png">
+
+  <title>Ativer | Projetos e Soluções Industriais Premium</title>
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0A0A0A',
+            brandPrimary: '#0066FF',
+            brandSecondary: '#00D4FF',
+            brandGray: '#1F1F1F',
+            brandTextMuted: '#A3A3A3',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            syne: ['Syne', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- FontAwesome Icons for additional depth -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brandDark text-white selection:bg-brandPrimary selection:text-white">
+
+  <!-- Custom Custom Cursor -->
+  <div id="custom-cursor"></div>
+  <div id="custom-cursor-follower"></div>
+
+  <!-- Preloader Screen -->
+  <div id="preloader" class="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-black">
+    <div class="relative w-24 h-24 mb-6">
+      <div class="absolute inset-0 border-4 border-t-brandPrimary border-r-transparent border-b-brandSecondary border-l-transparent rounded-full animate-spin"></div>
+      <div class="absolute inset-2 border-4 border-t-transparent border-r-brandSecondary border-b-transparent border-l-brandPrimary rounded-full animate-spin" style="animation-duration: 1.5s; animation-direction: reverse;"></div>
+    </div>
+    <div class="font-syne text-xl font-bold tracking-wider uppercase text-brandSecondary animate-pulse">Ativer</div>
+    <div class="text-xs text-brandTextMuted mt-2 tracking-widest">Carregando inovação...</div>
+  </div>
+
+  <!-- Floating Navigation Bar -->
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Premium Logo (SVG + Text) -->
+      <a href="#hero" class="flex items-center gap-3 group relative cursor-pointer" aria-label="Ativer Projetos e Soluções Home">
+        <div class="relative w-10 h-10 flex items-center justify-center">
+          <!-- Animated Tech Hexagon Shape -->
+          <svg class="absolute inset-0 w-full h-full transform group-hover:rotate-180 transition-transform duration-700" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" stroke="url(#logo-grad)" stroke-width="6" fill="rgba(0, 102, 255, 0.05)"/>
+            <defs>
+              <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0066FF" />
+                <stop offset="100%" stop-color="#00D4FF" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="font-syne text-lg font-extrabold text-white group-hover:text-brandSecondary transition-colors duration-300">A</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-syne text-xl font-extrabold tracking-wide bg-gradient-to-r from-white via-white to-brandSecondary bg-clip-text text-transparent">ATIVER</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-brandTextMuted -mt-1 font-semibold">Projetos & Soluções</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-8 bg-white/5 backdrop-blur-md px-8 py-3 rounded-full border border-white/10 shadow-lg">
+        <a href="#about" class="nav-link text-sm font-medium hover:text-brandSecondary transition-colors duration-300" data-cursor-hover>Sobre</a>
+        <a href="#services" class="nav-link text-sm font-medium hover:text-brandSecondary transition-colors duration-300" data-cursor-hover>Serviços</a>
+        <a href="#differentials" class="nav-link text-sm font-medium hover:text-brandSecondary transition-colors duration-300" data-cursor-hover>Diferenciais</a>
+        <a href="#projects" class="nav-link text-sm font-medium hover:text-brandSecondary transition-colors duration-300" data-cursor-hover>Cases</a>
+        <a href="#process" class="nav-link text-sm font-medium hover:text-brandSecondary transition-colors duration-300" data-cursor-hover>Processo</a>
+        <a href="#sustainability" class="nav-link text-sm font-medium hover:text-brandSecondary transition-colors duration-300" data-cursor-hover>Sustentabilidade</a>
+      </nav>
+
+      <!-- Budget & CTA Button -->
+      <div class="hidden md:block">
+        <button onclick="openModal()" class="magnetic-wrap relative px-6 py-2.5 rounded-full bg-gradient-to-r from-brandPrimary to-brandSecondary text-white font-semibold text-sm shadow-[0_4px_20px_rgba(0,102,255,0.3)] hover:shadow-[0_4px_25px_rgba(0,212,255,0.5)] hover:scale-105 transition-all duration-300 overflow-hidden group" data-cursor-hover>
+          <span class="relative z-10">Solicitar Orçamento</span>
+          <span class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="md:hidden flex flex-col justify-center items-center gap-1.5 w-8 h-8 rounded-full bg-white/10" id="mobile-menu-btn" aria-label="Abrir Menu">
+        <span class="w-5 h-0.5 bg-white transition-all duration-300" id="bar1"></span>
+        <span class="w-5 h-0.5 bg-white transition-all duration-300" id="bar2"></span>
+        <span class="w-5 h-0.5 bg-white transition-all duration-300" id="bar3"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-45 bg-brandDark/98 backdrop-blur-xl flex flex-col justify-center items-center gap-8 translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+      <a href="#about" class="mobile-nav-link text-2xl font-syne font-bold hover:text-brandSecondary transition-colors">Sobre Nós</a>
+      <a href="#services" class="mobile-nav-link text-2xl font-syne font-bold hover:text-brandSecondary transition-colors">Serviços</a>
+      <a href="#differentials" class="mobile-nav-link text-2xl font-syne font-bold hover:text-brandSecondary transition-colors">Diferenciais</a>
+      <a href="#projects" class="mobile-nav-link text-2xl font-syne font-bold hover:text-brandSecondary transition-colors">Projetos & Cases</a>
+      <a href="#process" class="mobile-nav-link text-2xl font-syne font-bold hover:text-brandSecondary transition-colors">Como Trabalhamos</a>
+      <a href="#sustainability" class="mobile-nav-link text-2xl font-syne font-bold hover:text-brandSecondary transition-colors">Sustentabilidade</a>
+
+      <button onclick="openModal(); toggleMobileMenu();" class="mt-4 px-8 py-3 rounded-full bg-gradient-to-r from-brandPrimary to-brandSecondary text-white font-bold shadow-lg">
+        Solicitar Orçamento
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section with Interactive 3D Canvas -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden tech-grid-bg pt-20">
+    <!-- WebGL Canvas Container for Three.js -->
+    <div id="three-canvas-container" class="absolute inset-0 z-0 opacity-70 pointer-events-none"></div>
+
+    <!-- Glowing Background Highlights -->
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 glow-spot-blue z-0 pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 glow-spot-cyan z-0 pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10 flex flex-col items-center">
+      <!-- Premium Tech Badge -->
+      <div class="mb-6 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 flex items-center gap-2 animate-pulse">
+        <span class="w-2 h-2 rounded-full bg-brandSecondary"></span>
+        <span class="text-xs font-semibold uppercase tracking-widest text-brandSecondary">Engenharia de Alta Performance</span>
+      </div>
+
+      <!-- Headline Strong -->
+      <h1 class="text-4xl md:text-7xl font-syne font-extrabold tracking-tight leading-none text-white max-w-4xl reveal-text mb-6">
+        Transformamos <span class="bg-gradient-to-r from-brandPrimary via-brandSecondary to-white bg-clip-text text-transparent">Engenharia</span> em Soluções Inteligentes.
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-base md:text-xl text-brandTextMuted max-w-2xl mb-10 leading-relaxed font-light">
+        Projetos de automação industrial e sistemas de tratamento de água desenvolvidos para máxima eficiência, segurança e inovação.
+      </p>
+
+      <!-- Action CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto">
+        <button onclick="openModal()" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-brandPrimary to-brandSecondary text-white font-bold text-base shadow-[0_4px_30px_rgba(0,102,255,0.4)] hover:shadow-[0_4px_40px_rgba(0,212,255,0.6)] hover:scale-105 transition-all duration-300" data-cursor-hover>
+          Solicitar orçamento
+        </button>
+        <a href="#projects" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-semibold text-base hover:bg-white/10 transition-colors duration-300 flex items-center justify-center gap-2" data-cursor-hover>
+          Conheça nossos projetos <i class="fa-solid fa-arrow-right text-brandSecondary text-sm"></i>
+        </a>
+      </div>
+
+      <!-- Micro Interactive 3D Mockup Container (Circuit/Helix Node in background) -->
+      <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-48 h-48 opacity-10 pointer-events-none select-none">
+        <!-- Structural mesh placeholder in JS -->
+      </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-brandTextMuted hover:text-brandSecondary transition-colors duration-300" data-cursor-hover>
+      <span class="text-xs uppercase tracking-widest font-semibold">Descobrir Ativer</span>
+      <div class="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-1.5">
+        <div class="w-1.5 h-1.5 bg-brandSecondary rounded-full animate-bounce"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="relative py-24 md:py-32 overflow-hidden border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <!-- Visual Column -->
+        <div class="lg:col-span-5 relative">
+          <!-- Glass Card Overlay -->
+          <div class="absolute inset-0 -m-4 bg-gradient-to-tr from-brandPrimary/10 to-brandSecondary/10 rounded-3xl blur-2xl"></div>
+          <div class="relative glass-panel rounded-3xl p-8 overflow-hidden border border-white/10 shadow-2xl">
+            <!-- Tech Interface Design Overlay -->
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+              </div>
+              <span class="text-xs font-mono text-brandSecondary">SYSTEMS.STATUS // ATIVER</span>
+            </div>
+
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-brandPrimary/20 flex items-center justify-center text-brandSecondary">
+                  <i class="fa-solid fa-microchip"></i>
+                </div>
+                <div>
+                  <h4 class="font-syne font-bold text-white text-lg">Inovação e Qualidade</h4>
+                  <p class="text-brandTextMuted text-sm mt-1">Integração de hardware de última geração com programação robusta de CLP e sistemas supervisórios.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-brandSecondary/20 flex items-center justify-center text-brandSecondary">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                  <h4 class="font-syne font-bold text-white text-lg">Segurança e Eficiência</h4>
+                  <p class="text-brandTextMuted text-sm mt-1">Conformidade total com as normas vigentes, assegurando máxima confiabilidade no processo produtivo.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-brandPrimary/20 flex items-center justify-center text-brandSecondary">
+                  <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div>
+                  <h4 class="font-syne font-bold text-white text-lg">Sustentabilidade Operacional</h4>
+                  <p class="text-brandTextMuted text-sm mt-1">Projetos voltados para otimização do consumo de energia e insumos, com expertise renomada em tratamento de água (ETA) e efluentes (ETE).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info Column -->
+        <div class="lg:col-span-7 flex flex-col justify-center">
+          <span class="text-xs font-semibold uppercase tracking-widest text-brandSecondary mb-4 block">// SOBRE A ATIVER</span>
+          <h2 class="text-3xl md:text-5xl font-syne font-extrabold tracking-tight mb-6">
+            A engenharia do futuro aplicada hoje à sua indústria.
+          </h2>
+          <p class="text-brandTextMuted text-base md:text-lg mb-8 leading-relaxed font-light">
+            A **Ativer Projetos e Soluções** é líder no desenvolvimento de soluções completas de engenharia e tecnologia para a indústria moderna. Do desenvolvimento de painéis de força e controle à automação integrada de grandes estações de tratamento de água e efluentes, nós geramos resultados mensuráveis de eficiência, conformidade e retorno sobre investimento.
+          </p>
+
+          <!-- Focus Specialties Tag Cloud -->
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold uppercase text-brandSecondary hover:border-brandSecondary/30 transition-all cursor-pointer">Automação Industrial</span>
+            <span class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold uppercase text-brandSecondary hover:border-brandSecondary/30 transition-all cursor-pointer">Sistemas Supervisórios</span>
+            <span class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold uppercase text-brandSecondary hover:border-brandSecondary/30 transition-all cursor-pointer">CLPs de Alta Performance</span>
+            <span class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold uppercase text-brandSecondary hover:border-brandSecondary/30 transition-all cursor-pointer">Painéis Elétricos</span>
+            <span class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold uppercase text-brandSecondary hover:border-brandSecondary/30 transition-all cursor-pointer">Projetos Industriais</span>
+            <span class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold uppercase text-brandSecondary hover:border-brandSecondary/30 transition-all cursor-pointer">Tratamento ETA e ETE</span>
+            <span class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold uppercase text-brandSecondary hover:border-brandSecondary/30 transition-all cursor-pointer">Integração de Sistemas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="relative py-24 md:py-32 bg-black/40 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-xs font-semibold uppercase tracking-widest text-brandSecondary mb-4 block">// NOSSOS SERVIÇOS</span>
+        <h2 class="text-3xl md:text-5xl font-syne font-extrabold tracking-tight mb-6">
+          Portfólio de soluções completas de ponta a ponta.
+        </h2>
+        <p class="text-brandTextMuted text-base md:text-lg leading-relaxed font-light">
+          Aliamos inteligência em engenharia e tecnologia para projetar e implementar sistemas eficientes e focados no ganho de desempenho.
+        </p>
+      </div>
+
+      <!-- Services Modern Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-2xl flex flex-col justify-between group" data-cursor-hover>
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brandPrimary/10 border border-brandPrimary/20 flex items-center justify-center text-brandPrimary mb-6 group-hover:bg-brandPrimary/20 group-hover:scale-110 transition-all duration-300">
+              <i class="fa-solid fa-gears text-2xl"></i>
+            </div>
+            <h3 class="font-syne font-bold text-xl mb-4 group-hover:text-brandSecondary transition-colors">Automação Industrial</h3>
+            <p class="text-brandTextMuted text-sm leading-relaxed">
+              Modernização de plantas fabris, desenvolvimento de malhas de controle complexas e inteligência para processos operacionais contínuos.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+            <span>Eficiência Absoluta</span>
+            <i class="fa-solid fa-chevron-right transform group-hover:translate-x-2 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-2xl flex flex-col justify-between group" data-cursor-hover>
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brandSecondary/10 border border-brandSecondary/20 flex items-center justify-center text-brandSecondary mb-6 group-hover:bg-brandSecondary/20 group-hover:scale-110 transition-all duration-300">
+              <i class="fa-solid fa-code text-2xl"></i>
+            </div>
+            <h3 class="font-syne font-bold text-xl mb-4 group-hover:text-brandSecondary transition-colors">Software para Automação</h3>
+            <p class="text-brandTextMuted text-sm leading-relaxed">
+              Programação avançada de CLPs (Rockwell, Siemens, Schneider), interfaces IHM personalizadas e integração ágil com bancos de dados.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+            <span>Códigos Confiáveis</span>
+            <i class="fa-solid fa-chevron-right transform group-hover:translate-x-2 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-2xl flex flex-col justify-between group" data-cursor-hover>
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brandPrimary/10 border border-brandPrimary/20 flex items-center justify-center text-brandPrimary mb-6 group-hover:bg-brandPrimary/20 group-hover:scale-110 transition-all duration-300">
+              <i class="fa-solid fa-bolt text-2xl"></i>
+            </div>
+            <h3 class="font-syne font-bold text-xl mb-4 group-hover:text-brandSecondary transition-colors">Painéis Elétricos</h3>
+            <p class="text-brandTextMuted text-sm leading-relaxed">
+              Montagem certificada de painéis de controle, TTA/PTTA, CCMs fixos e extraíveis em plena conformidade com as normas NBR IEC 61439-1 e NR-10.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+            <span>Certificação Total</span>
+            <i class="fa-solid fa-chevron-right transform group-hover:translate-x-2 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-2xl flex flex-col justify-between group" data-cursor-hover>
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brandSecondary/10 border border-brandSecondary/20 flex items-center justify-center text-brandSecondary mb-6 group-hover:bg-brandSecondary/20 group-hover:scale-110 transition-all duration-300">
+              <i class="fa-solid fa-bezier-curve text-2xl"></i>
+            </div>
+            <h3 class="font-syne font-bold text-xl mb-4 group-hover:text-brandSecondary transition-colors">Projetos Elétricos</h3>
+            <p class="text-brandTextMuted text-sm leading-relaxed">
+              Projetos detalhados em plataforma CAD/EPLAN, dimensionamento de cabos, subestações e diagramas funcionais para indústrias de todos os portes.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+            <span>EPLAN Standard</span>
+            <i class="fa-solid fa-chevron-right transform group-hover:translate-x-2 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-2xl flex flex-col justify-between group" data-cursor-hover>
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brandPrimary/10 border border-brandPrimary/20 flex items-center justify-center text-brandPrimary mb-6 group-hover:bg-brandPrimary/20 group-hover:scale-110 transition-all duration-300">
+              <i class="fa-solid fa-compass-drafting text-2xl"></i>
+            </div>
+            <h3 class="font-syne font-bold text-xl mb-4 group-hover:text-brandSecondary transition-colors">Instrumentação Industrial</h3>
+            <p class="text-brandTextMuted text-sm leading-relaxed">
+              Calibração, especificação e configuração de sensores industriais, transmissores de nível, pressão, vazão e analisadores de qualidade analíticos.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+            <span>Precisão Métrica</span>
+            <i class="fa-solid fa-chevron-right transform group-hover:translate-x-2 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-2xl flex flex-col justify-between group" data-cursor-hover>
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brandSecondary/10 border border-brandSecondary/20 flex items-center justify-center text-brandSecondary mb-6 group-hover:bg-brandSecondary/20 group-hover:scale-110 transition-all duration-300">
+              <i class="fa-solid fa-droplet text-2xl"></i>
+            </div>
+            <h3 class="font-syne font-bold text-xl mb-4 group-hover:text-brandSecondary transition-colors">Estações de Água (ETA)</h3>
+            <p class="text-brandTextMuted text-sm leading-relaxed">
+              Automação completa para Estações de Tratamento de Água Potável, poços artesianos e reuso, garantindo qualidade impecável e consumo inteligente.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+            <span>Sustentabilidade Hídrica</span>
+            <i class="fa-solid fa-chevron-right transform group-hover:translate-x-2 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-2xl flex flex-col justify-between group" data-cursor-hover>
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brandPrimary/10 border border-brandPrimary/20 flex items-center justify-center text-brandPrimary mb-6 group-hover:bg-brandPrimary/20 group-hover:scale-110 transition-all duration-300">
+              <i class="fa-solid fa-water text-2xl"></i>
+            </div>
+            <h3 class="font-syne font-bold text-xl mb-4 group-hover:text-brandSecondary transition-colors">Estações de Efluentes (ETE)</h3>
+            <p class="text-brandTextMuted text-sm leading-relaxed">
+              Controle avançado de tratamento biológico e físico-químico de efluentes industriais, dosagem inteligente de produtos químicos e automação de descarte.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+            <span>Conformidade Ambiental</span>
+            <i class="fa-solid fa-chevron-right transform group-hover:translate-x-2 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-2xl flex flex-col justify-between group" data-cursor-hover>
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brandSecondary/10 border border-brandSecondary/20 flex items-center justify-center text-brandSecondary mb-6 group-hover:bg-brandSecondary/20 group-hover:scale-110 transition-all duration-300">
+              <i class="fa-solid fa-network-wired text-2xl"></i>
+            </div>
+            <h3 class="font-syne font-bold text-xl mb-4 group-hover:text-brandSecondary transition-colors">Integração de Sistemas</h3>
+            <p class="text-brandTextMuted text-sm leading-relaxed">
+              Comunicação otimizada entre campo e gerência via protocolos industriais (Ethernet/IP, Modbus, Profinet, OPC UA) e sistemas SCADA personalizados.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+            <span>Sinergia Industrial</span>
+            <i class="fa-solid fa-chevron-right transform group-hover:translate-x-2 transition-transform"></i>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-2xl flex flex-col justify-between group" data-cursor-hover>
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-brandPrimary/10 border border-brandPrimary/20 flex items-center justify-center text-brandPrimary mb-6 group-hover:bg-brandPrimary/20 group-hover:scale-110 transition-all duration-300">
+              <i class="fa-solid fa-headset text-2xl"></i>
+            </div>
+            <h3 class="font-syne font-bold text-xl mb-4 group-hover:text-brandSecondary transition-colors">Suporte Técnico 24/7</h3>
+            <p class="text-brandTextMuted text-sm leading-relaxed">
+              Contratos de manutenção corretiva e preventiva, pronto-atendimento remoto ou presencial e calibrações programadas para sua operação não parar.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+            <span>Segurança Contínua</span>
+            <i class="fa-solid fa-chevron-right transform group-hover:translate-x-2 transition-transform"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentials Section with Interactive Counters -->
+  <section id="differentials" class="relative py-24 md:py-32 tech-grid-bg overflow-hidden border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <!-- Text details -->
+        <div class="lg:col-span-6">
+          <span class="text-xs font-semibold uppercase tracking-widest text-brandSecondary mb-4 block">// NOSSOS DIFERENCIAIS</span>
+          <h2 class="text-3xl md:text-5xl font-syne font-extrabold tracking-tight mb-6">
+            Por que escolher a Ativer Projetos?
+          </h2>
+          <p class="text-brandTextMuted text-base md:text-lg mb-8 leading-relaxed font-light">
+            Nossos projetos são criados sob medida para responder às reais necessidades operacionais e financeiras de cada cliente. Combinando anos de engenharia especializada com as tecnologias mais modernas do mercado.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-6 h-6 rounded-full bg-brandSecondary/20 flex items-center justify-center text-brandSecondary mt-1">
+                <i class="fa-solid fa-check text-xs"></i>
+              </div>
+              <div>
+                <h4 class="font-syne font-bold text-white text-lg">Soluções Sob Medida</h4>
+                <p class="text-brandTextMuted text-sm mt-1">Sem pacotes fechados. Avaliamos sua planta para gerar soluções precisas e econômicas.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-6 h-6 rounded-full bg-brandSecondary/20 flex items-center justify-center text-brandSecondary mt-1">
+                <i class="fa-solid fa-check text-xs"></i>
+              </div>
+              <div>
+                <h4 class="font-syne font-bold text-white text-lg">Tecnologia de Ponta</h4>
+                <p class="text-brandTextMuted text-sm mt-1">Integramos o que há de melhor e mais recente em Internet das Coisas (IoT), IA e automação.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Grid Column -->
+        <div class="lg:col-span-6 grid grid-cols-2 gap-6 md:gap-8">
+          <!-- Stat 1 -->
+          <div class="glass-panel p-6 md:p-8 rounded-2xl border border-white/10 relative overflow-hidden group">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-brandPrimary/10 rounded-full blur-xl group-hover:scale-150 transition-transform"></div>
+            <span class="text-brandSecondary font-mono text-xs uppercase tracking-wider block mb-2">PROJETOS ENTREGUES</span>
+            <div class="text-4xl md:text-5xl font-syne font-bold tracking-tight mb-2 flex items-baseline">
+              <span class="count" data-target="150">0</span><span class="text-brandSecondary">+</span>
+            </div>
+            <p class="text-brandTextMuted text-xs leading-relaxed">Em todo o território nacional.</p>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="glass-panel p-6 md:p-8 rounded-2xl border border-white/10 relative overflow-hidden group">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-brandSecondary/10 rounded-full blur-xl group-hover:scale-150 transition-transform"></div>
+            <span class="text-brandSecondary font-mono text-xs uppercase tracking-wider block mb-2">EFICIÊNCIA OPERACIONAL</span>
+            <div class="text-4xl md:text-5xl font-syne font-bold tracking-tight mb-2 flex items-baseline">
+              <span class="count" data-target="35">0</span><span class="text-brandSecondary">%</span>
+            </div>
+            <p class="text-brandTextMuted text-xs leading-relaxed">Média de aumento reportado.</p>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="glass-panel p-6 md:p-8 rounded-2xl border border-white/10 relative overflow-hidden group">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-brandPrimary/10 rounded-full blur-xl group-hover:scale-150 transition-transform"></div>
+            <span class="text-brandSecondary font-mono text-xs uppercase tracking-wider block mb-2">REDUÇÃO DE CONSUMO</span>
+            <div class="text-4xl md:text-5xl font-syne font-bold tracking-tight mb-2 flex items-baseline">
+              <span class="count" data-target="25">0</span><span class="text-brandSecondary">%</span>
+            </div>
+            <p class="text-brandTextMuted text-xs leading-relaxed">De água e energia nas plantas.</p>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="glass-panel p-6 md:p-8 rounded-2xl border border-white/10 relative overflow-hidden group">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-brandSecondary/10 rounded-full blur-xl group-hover:scale-150 transition-transform"></div>
+            <span class="text-brandSecondary font-mono text-xs uppercase tracking-wider block mb-2">ATENDIMENTO PREMIUM</span>
+            <div class="text-4xl md:text-5xl font-syne font-bold tracking-tight mb-2 flex items-baseline">
+              <span class="count" data-target="100">0</span><span class="text-brandSecondary">%</span>
+            </div>
+            <p class="text-brandTextMuted text-xs leading-relaxed">Satisfação e suporte completo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects (Cases Showcase) Section -->
+  <section id="projects" class="relative py-24 md:py-32 overflow-hidden border-t border-white/5 bg-black/50">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <!-- Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-widest text-brandSecondary mb-4 block">// CASES DE SUCESSO</span>
+          <h2 class="text-3xl md:text-5xl font-syne font-extrabold tracking-tight">
+            Engenharia de alta complexidade em ação.
+          </h2>
+        </div>
+        <!-- Portfolio Filters -->
+        <div class="flex flex-wrap gap-2">
+          <button class="project-filter active px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-brandSecondary bg-brandSecondary/10 text-white transition-all" data-filter="all" data-cursor-hover>Todos</button>
+          <button class="project-filter px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-white/10 text-brandTextMuted hover:border-brandSecondary/30 hover:text-white transition-all" data-filter="automacao" data-cursor-hover>Automação</button>
+          <button class="project-filter px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-white/10 text-brandTextMuted hover:border-brandSecondary/30 hover:text-white transition-all" data-filter="tratamento" data-cursor-hover>ETA & ETE</button>
+          <button class="project-filter px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-white/10 text-brandTextMuted hover:border-brandSecondary/30 hover:text-white transition-all" data-filter="paineis" data-cursor-hover>Painéis</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+        <!-- Project 1 (Automação) -->
+        <div class="project-item project-card bg-brandGray/40 border border-white/5 rounded-2xl overflow-hidden flex flex-col justify-between h-[480px] group transition-all duration-500" data-category="automacao" data-cursor-hover onclick="openProjectModal('retro_clp')">
+          <div class="relative overflow-hidden h-60">
+            <img src="assets/images/img_3.png" alt="Retrofit de CLP e Sistema Supervisório SCADA" class="w-full h-full object-cover project-card-image">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 bg-brandPrimary text-white text-[10px] font-bold uppercase tracking-wider rounded-md">Automação</span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="font-syne font-bold text-xl mb-2 text-white group-hover:text-brandSecondary transition-colors">Retrofit de CLP e Sistema Supervisório SCADA</h3>
+              <p class="text-brandTextMuted text-xs line-clamp-3 leading-relaxed">
+                Modernização completa de infraestrutura legada utilizando CLPs Siemens S7-1500 e desenvolvimento de sistema supervisório em Ignition para visualização em tempo real de KPIs de produção.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+              <span>Ver Detalhes</span>
+              <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 (Tratamento) -->
+        <div class="project-item project-card bg-brandGray/40 border border-white/5 rounded-2xl overflow-hidden flex flex-col justify-between h-[480px] group transition-all duration-500" data-category="tratamento" data-cursor-hover onclick="openProjectModal('eta_auto')">
+          <div class="relative overflow-hidden h-60">
+            <img src="assets/images/img_5.png" alt="Automação Completa de Estação de Água (ETA)" class="w-full h-full object-cover project-card-image">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 bg-brandSecondary text-black text-[10px] font-bold uppercase tracking-wider rounded-md">ETA & ETE</span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="font-syne font-bold text-xl mb-2 text-white group-hover:text-brandSecondary transition-colors">Automação de ETA Industrial com Reuso</h3>
+              <p class="text-brandTextMuted text-xs line-clamp-3 leading-relaxed">
+                Projeto, instrumentação e controle automático para estação de tratamento de água de alta vazão. Monitoramento contínuo de pH, turbidez e vazão com dosagem química inteligente auto-ajustável.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+              <span>Ver Detalhes</span>
+              <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 (Painéis) -->
+        <div class="project-item project-card bg-brandGray/40 border border-white/5 rounded-2xl overflow-hidden flex flex-col justify-between h-[480px] group transition-all duration-500" data-category="paineis" data-cursor-hover onclick="openProjectModal('ccm_auto')">
+          <div class="relative overflow-hidden h-60">
+            <img src="assets/images/img_0.png" alt="Montagem de CCMs Extraíveis e Painéis de Força" class="w-full h-full object-cover project-card-image">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 bg-brandPrimary text-white text-[10px] font-bold uppercase tracking-wider rounded-md">Painéis</span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="font-syne font-bold text-xl mb-2 text-white group-hover:text-brandSecondary transition-colors">Painéis TTA / PTTA Certificados</h3>
+              <p class="text-brandTextMuted text-xs line-clamp-3 leading-relaxed">
+                Engenharia, fabricação e testes de Aceitação em Fábrica (FAT) para conjunto de CCMs extraíveis inteligentes conectados via rede Profinet para grande planta automobilística.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+              <span>Ver Detalhes</span>
+              <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 (Automação) -->
+        <div class="project-item project-card bg-brandGray/40 border border-white/5 rounded-2xl overflow-hidden flex flex-col justify-between h-[480px] group transition-all duration-500" data-category="automacao" data-cursor-hover onclick="openProjectModal('scada_sist')">
+          <div class="relative overflow-hidden h-60">
+            <img src="assets/images/img_2.png" alt="Sistema de Supervisão e Gestão de Energia" class="w-full h-full object-cover project-card-image">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 bg-brandPrimary text-white text-[10px] font-bold uppercase tracking-wider rounded-md">Automação</span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="font-syne font-bold text-xl mb-2 text-white group-hover:text-brandSecondary transition-colors">Supervisão de Utilidades em Tempo Real</h3>
+              <p class="text-brandTextMuted text-xs line-clamp-3 leading-relaxed">
+                Integração de centenas de medidores de campo multimarcas a um único painel de controle SCADA de alto desempenho, reduzindo custos de desperdício em 18%.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+              <span>Ver Detalhes</span>
+              <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 (Tratamento) -->
+        <div class="project-item project-card bg-brandGray/40 border border-white/5 rounded-2xl overflow-hidden flex flex-col justify-between h-[480px] group transition-all duration-500" data-category="tratamento" data-cursor-hover onclick="openProjectModal('ete_quim')">
+          <div class="relative overflow-hidden h-60">
+            <img src="assets/images/img_1.png" alt="Tratamento Físico-Químico Automatizado de Efluentes" class="w-full h-full object-cover project-card-image">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 bg-brandSecondary text-black text-[10px] font-bold uppercase tracking-wider rounded-md">ETA & ETE</span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="font-syne font-bold text-xl mb-2 text-white group-hover:text-brandSecondary transition-colors">Automação de ETE de Indústria de Bebidas</h3>
+              <p class="text-brandTextMuted text-xs line-clamp-3 leading-relaxed">
+                Sistema avançado de controle biológico com aeração inteligente controlada por inversores de frequência e medição em tempo real de Oxigênio Dissolvido.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+              <span>Ver Detalhes</span>
+              <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 (Painéis) -->
+        <div class="project-item project-card bg-brandGray/40 border border-white/5 rounded-2xl overflow-hidden flex flex-col justify-between h-[480px] group transition-all duration-500" data-category="paineis" data-cursor-hover onclick="openProjectModal('proj_eplan')">
+          <div class="relative overflow-hidden h-60">
+            <img src="assets/images/img_4.png" alt="Projetos Elétricos de Alta Complexidade EPLAN" class="w-full h-full object-cover project-card-image">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-transparent to-transparent opacity-80"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 bg-brandPrimary text-white text-[10px] font-bold uppercase tracking-wider rounded-md">Painéis</span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="font-syne font-bold text-xl mb-2 text-white group-hover:text-brandSecondary transition-colors">Projetos Elétricos e Modelagem 3D EPLAN Pro Panel</h3>
+              <p class="text-brandTextMuted text-xs line-clamp-3 leading-relaxed">
+                Desenvolvimento de engenharia detalhada para subestações de baixa e média tensão, garantindo redução de 25% no tempo de montagem física de cabeamento.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-white/5 flex items-center justify-between text-brandSecondary text-xs font-semibold uppercase">
+              <span>Ver Detalhes</span>
+              <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Timeline Section -->
+  <section id="process" class="relative py-24 md:py-32 overflow-hidden border-t border-white/5 tech-grid-bg">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-xs font-semibold uppercase tracking-widest text-brandSecondary mb-4 block">// NOSSO PROCESSO</span>
+        <h2 class="text-3xl md:text-5xl font-syne font-extrabold tracking-tight mb-6">
+          Do Levantamento ao Suporte Contínuo.
+        </h2>
+        <p class="text-brandTextMuted text-base md:text-lg leading-relaxed font-light">
+          Metodologia de engenharia ágil e rigorosa para garantir qualidade técnica e o cumprimento exato dos prazos de entrega.
+        </p>
+      </div>
+
+      <!-- Animated Progress Path Timeline -->
+      <div class="relative mt-16">
+        <!-- SVG Connection Line -->
+        <div class="absolute top-1/2 left-0 w-full h-1 bg-brandGray -translate-y-1/2 z-0 hidden lg:block overflow-hidden">
+          <div id="timeline-progress-line" class="h-full bg-gradient-to-r from-brandPrimary to-brandSecondary w-0 transition-all duration-500"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 relative z-10">
+          <!-- Step 1 -->
+          <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between relative group hover:border-brandSecondary/30 transition-all">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold text-brandSecondary">FASE 01</span>
+              <div class="w-8 h-8 rounded-full bg-brandSecondary/20 flex items-center justify-center text-brandSecondary text-sm timeline-dot">
+                <i class="fa-solid fa-clipboard-list"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-syne font-bold text-lg mb-2 text-white">Levantamento</h3>
+              <p class="text-brandTextMuted text-xs leading-relaxed">Estudo aprofundado dos requisitos operacionais diretamente em sua planta fabril.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between relative group hover:border-brandSecondary/30 transition-all">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold text-brandPrimary">FASE 02</span>
+              <div class="w-8 h-8 rounded-full bg-brandPrimary/20 flex items-center justify-center text-brandPrimary text-sm">
+                <i class="fa-solid fa-pencil"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-syne font-bold text-lg mb-2 text-white">Projeto</h3>
+              <p class="text-brandTextMuted text-xs leading-relaxed">Modelagem técnica em EPLAN, dimensionamentos e simulação computacional estruturada.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between relative group hover:border-brandSecondary/30 transition-all">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold text-brandSecondary">FASE 03</span>
+              <div class="w-8 h-8 rounded-full bg-brandSecondary/20 flex items-center justify-center text-brandSecondary text-sm">
+                <i class="fa-solid fa-code"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-syne font-bold text-lg mb-2 text-white">Desenvolvimento</h3>
+              <p class="text-brandTextMuted text-xs leading-relaxed">Programação dedicada de lógica de CLPs, IHMs e desenvolvimento de banco de dados.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between relative group hover:border-brandSecondary/30 transition-all">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold text-brandPrimary">FASE 04</span>
+              <div class="w-8 h-8 rounded-full bg-brandPrimary/20 flex items-center justify-center text-brandPrimary text-sm">
+                <i class="fa-solid fa-hammer"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-syne font-bold text-lg mb-2 text-white">Implementação</h3>
+              <p class="text-brandTextMuted text-xs leading-relaxed">Montagem física de painéis elétricos e infraestrutura física com equipe qualificada.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between relative group hover:border-brandSecondary/30 transition-all">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold text-brandSecondary">FASE 05</span>
+              <div class="w-8 h-8 rounded-full bg-brandSecondary/20 flex items-center justify-center text-brandSecondary text-sm">
+                <i class="fa-solid fa-vial"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-syne font-bold text-lg mb-2 text-white">Testes</h3>
+              <p class="text-brandTextMuted text-xs leading-relaxed">Validação minuciosa de software e hardware em laboratório antes do start-up oficial.</p>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between relative group hover:border-brandSecondary/30 transition-all">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-bold text-brandPrimary">FASE 06</span>
+              <div class="w-8 h-8 rounded-full bg-brandPrimary/20 flex items-center justify-center text-brandPrimary text-sm">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-syne font-bold text-lg mb-2 text-white">Suporte</h3>
+              <p class="text-brandTextMuted text-xs leading-relaxed">Atendimento preventivo e corretivo integral para sua operação se manter estável.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability Section -->
+  <section id="sustainability" class="relative py-24 md:py-32 overflow-hidden border-t border-white/5 bg-gradient-to-b from-brandDark to-black">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Content -->
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-widest text-brandSecondary mb-4 block">// COMPROMISSO AMBIENTAL</span>
+          <h2 class="text-3xl md:text-5xl font-syne font-extrabold tracking-tight mb-6">
+            Engenharia sustentável que impulsiona os seus negócios.
+          </h2>
+          <p class="text-brandTextMuted text-base md:text-lg mb-8 leading-relaxed font-light">
+            Na Ativer, acreditamos que a alta tecnologia industrial deve ser aliada à preservação de recursos do nosso planeta. Desenvolvemos sistemas de automação voltados para a otimização hídrica e energética, reduzindo resíduos e custos.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-lg bg-green-500/10 border border-green-500/20 flex items-center justify-center text-green-400 shrink-0">
+                <i class="fa-solid fa-droplet text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-syne font-bold text-white text-lg">Tratamento de Água</h4>
+                <p class="text-brandTextMuted text-xs mt-1">Garantia de reuso de água e tratamento de efluentes industriais com descarte zero.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+                <i class="fa-solid fa-plug text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-syne font-bold text-white text-lg">Eficiência Energética</h4>
+                <p class="text-brandTextMuted text-xs mt-1">Lógicas de controle que reduzem picos de energia com inversores de frequência inteligentes.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-lg bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center text-yellow-400 shrink-0">
+                <i class="fa-solid fa-chart-line text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-syne font-bold text-white text-lg">Redução de Desperdícios</h4>
+                <p class="text-brandTextMuted text-xs mt-1">Sensores finos de vazão e pressão reduzem sensivelmente perdas ocultas em tubulações.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                <i class="fa-solid fa-recycle text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-syne font-bold text-white text-lg">Responsabilidade</h4>
+                <p class="text-brandTextMuted text-xs mt-1">Conformidade rígida às normas regulatórias de proteção ecológica nacionais.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Visualization Card -->
+        <div class="relative flex justify-center">
+          <div class="absolute inset-0 bg-gradient-to-tr from-brandSecondary/20 to-transparent rounded-3xl blur-2xl"></div>
+          <div class="relative glass-panel rounded-3xl p-8 max-w-md border border-white/10 shadow-2xl flex flex-col gap-6">
+            <h4 class="font-syne font-bold text-xl text-white">Impacto Gerado Médio</h4>
+            <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+              <div class="flex justify-between text-xs text-brandTextMuted mb-2">
+                <span>Eficiência de Reuso Hídrico</span>
+                <span class="text-brandSecondary font-bold">94%</span>
+              </div>
+              <div class="w-full bg-brandGray h-2 rounded-full overflow-hidden">
+                <div class="bg-brandSecondary h-full rounded-full" style="width: 94%"></div>
+              </div>
+            </div>
+
+            <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+              <div class="flex justify-between text-xs text-brandTextMuted mb-2">
+                <span>Economia de Consumo Energético</span>
+                <span class="text-brandPrimary font-bold">28%</span>
+              </div>
+              <div class="w-full bg-brandGray h-2 rounded-full overflow-hidden">
+                <div class="bg-brandPrimary h-full rounded-full" style="width: 28%"></div>
+              </div>
+            </div>
+
+            <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+              <div class="flex justify-between text-xs text-brandTextMuted mb-2">
+                <span>Segurança e Conformidade Legal</span>
+                <span class="text-green-400 font-bold">100%</span>
+              </div>
+              <div class="w-full bg-brandGray h-2 rounded-full overflow-hidden">
+                <div class="bg-green-400 h-full rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="relative py-24 md:py-32 overflow-hidden border-t border-white/5 bg-black/30">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-semibold uppercase tracking-widest text-brandSecondary mb-4 block">// DEPOIMENTOS DE PARCEIROS</span>
+        <h2 class="text-3xl md:text-5xl font-syne font-extrabold tracking-tight">
+          A confiança de quem cresce com a Ativer.
+        </h2>
+      </div>
+
+      <!-- Testimonials Slider -->
+      <div class="relative max-w-4xl mx-auto overflow-hidden">
+        <div id="testimonial-slider-container" class="flex transition-transform duration-500 ease-out">
+          <!-- Slide 1 -->
+          <div class="w-full flex-shrink-0 px-4">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/10 relative">
+              <i class="fa-solid fa-quote-right absolute top-8 right-8 text-6xl text-white/5"></i>
+              <div class="flex gap-1 text-brandSecondary mb-6">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-white text-lg md:text-xl font-light italic leading-relaxed mb-8">
+                "A automação da nossa Estação de Tratamento de Efluentes desenvolvida pela Ativer superou todas as expectativas. Além de nos enquadrar perfeitamente nas exigências ambientais vigentes, o sistema reduziu de forma substancial o desperdício com produtos químicos."
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-brandSecondary/20 flex items-center justify-center text-brandSecondary font-bold text-lg">
+                  RC
+                </div>
+                <div>
+                  <h4 class="font-syne font-bold text-white text-base">Ricardo Camargo</h4>
+                  <p class="text-brandTextMuted text-xs">Gerente de Processos Industriais, Biosan Soluções</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="w-full flex-shrink-0 px-4">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/10 relative">
+              <i class="fa-solid fa-quote-right absolute top-8 right-8 text-6xl text-white/5"></i>
+              <div class="flex gap-1 text-brandSecondary mb-6">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-white text-lg md:text-xl font-light italic leading-relaxed mb-8">
+                "O retrofit dos nossos painéis elétricos com CCMs extraíveis inteligentes aumentou a confiabilidade da nossa linha de montagem de forma exponencial. Suporte técnico rápido, assertivo e especializado."
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-brandPrimary/20 flex items-center justify-center text-brandPrimary font-bold text-lg">
+                  MA
+                </div>
+                <div>
+                  <h4 class="font-syne font-bold text-white text-base">Maurício Albuquerque</h4>
+                  <p class="text-brandTextMuted text-xs">Diretor de Manutenção, AutoParts S.A.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="w-full flex-shrink-0 px-4">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/10 relative">
+              <i class="fa-solid fa-quote-right absolute top-8 right-8 text-6xl text-white/5"></i>
+              <div class="flex gap-1 text-brandSecondary mb-6">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-white text-lg md:text-xl font-light italic leading-relaxed mb-8">
+                "O sistema supervisório desenvolvido em Ignition unificou nossos dados de forma espetacular. Temos controle total e métricas precisas sobre consumo de energia e insumos químicos na ponta dos dedos."
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-brandSecondary/20 flex items-center justify-center text-brandSecondary font-bold text-lg">
+                  FS
+                </div>
+                <div>
+                  <h4 class="font-syne font-bold text-white text-base">Fernanda Siqueira</h4>
+                  <p class="text-brandTextMuted text-xs">Coordenadora de Engenharia, Kraft Alimentos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider controls -->
+        <div class="flex justify-center gap-4 mt-8">
+          <button id="slider-prev" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brandSecondary hover:text-brandSecondary transition-all" data-cursor-hover>
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button id="slider-next" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brandSecondary hover:text-brandSecondary transition-all" data-cursor-hover>
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="relative py-24 md:py-32 overflow-hidden border-t border-white/5 bg-brandDark text-center flex flex-col items-center justify-center">
+    <div class="absolute inset-0 bg-gradient-to-t from-brandPrimary/10 to-brandSecondary/5 pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto px-6 relative z-10 flex flex-col items-center">
+      <h2 class="text-4xl md:text-6xl font-syne font-extrabold tracking-tight mb-6 leading-tight">
+        Pronto para modernizar sua operação?
+      </h2>
+      <p class="text-brandTextMuted text-base md:text-lg max-w-xl mb-10 font-light">
+        Deixe que nossa equipe de engenharia especializada desenvolva a solução ideal para otimizar os seus processos produtivos.
+      </p>
+
+      <button onclick="openModal()" class="px-10 py-5 rounded-full bg-gradient-to-r from-brandPrimary to-brandSecondary text-white font-bold text-lg shadow-[0_4px_30px_rgba(0,102,255,0.4)] hover:shadow-[0_4px_45px_rgba(0,212,255,0.7)] hover:scale-105 transition-all duration-300" data-cursor-hover>
+        Solicite um orçamento
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative bg-black/80 border-t border-white/10 pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <!-- Logo & Desc -->
+        <div class="space-y-6">
+          <a href="#hero" class="flex items-center gap-3">
+            <div class="w-8 h-8 flex items-center justify-center relative">
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" stroke="#00D4FF" stroke-width="8" fill="rgba(0, 102, 255, 0.05)"/>
+              </svg>
+              <span class="font-syne text-sm font-extrabold text-white">A</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-syne text-lg font-extrabold tracking-wide">ATIVER</span>
+              <span class="text-[8px] uppercase tracking-[0.25em] text-brandTextMuted -mt-1">Projetos & Soluções</span>
+            </div>
+          </a>
+          <p class="text-brandTextMuted text-xs leading-relaxed font-light">
+            Soluções inovadoras de engenharia, automação industrial de ponta e desenvolvimento de sistemas para ETA e ETE de máxima performance.
+          </p>
+          <!-- Social Icons -->
+          <div class="flex gap-4">
+            <a href="#" class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brandSecondary hover:text-black hover:scale-110 transition-all text-sm" data-cursor-hover aria-label="Facebook Ativer"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brandSecondary hover:text-black hover:scale-110 transition-all text-sm" data-cursor-hover aria-label="Instagram Ativer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brandSecondary hover:text-black hover:scale-110 transition-all text-sm" data-cursor-hover aria-label="LinkedIn Ativer"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Menu links -->
+        <div>
+          <h4 class="font-syne font-bold text-white text-base mb-6">Explore o Site</h4>
+          <ul class="space-y-3 text-brandTextMuted text-sm">
+            <li><a href="#about" class="hover:text-brandSecondary transition-colors" data-cursor-hover>Sobre a Ativer</a></li>
+            <li><a href="#services" class="hover:text-brandSecondary transition-colors" data-cursor-hover>Nossos Serviços</a></li>
+            <li><a href="#differentials" class="hover:text-brandSecondary transition-colors" data-cursor-hover>Diferenciais Técnicos</a></li>
+            <li><a href="#projects" class="hover:text-brandSecondary transition-colors" data-cursor-hover>Cases de Sucesso</a></li>
+            <li><a href="#process" class="hover:text-brandSecondary transition-colors" data-cursor-hover>Processo de Trabalho</a></li>
+            <li><a href="#sustainability" class="hover:text-brandSecondary transition-colors" data-cursor-hover>Sustentabilidade</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacts -->
+        <div>
+          <h4 class="font-syne font-bold text-white text-base mb-6">Fale Conosco</h4>
+          <ul class="space-y-4 text-brandTextMuted text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-envelope text-brandSecondary mt-1"></i>
+              <div>
+                <span class="block text-xs uppercase font-semibold text-white">E-mail Comercial</span>
+                <a href="mailto:contato@ativer.com.br" class="hover:text-brandSecondary transition-colors" data-cursor-hover>contato@ativer.com.br</a>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-phone text-brandSecondary mt-1"></i>
+              <div>
+                <span class="block text-xs uppercase font-semibold text-white">Telefone & WhatsApp</span>
+                <a href="https://wa.me/5511999999999" target="_blank" class="hover:text-brandSecondary transition-colors flex items-center gap-1.5" data-cursor-hover>
+                  +55 (11) 99999-9999 <i class="fa-brands fa-whatsapp text-green-400"></i>
+                </a>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-clock text-brandSecondary mt-1"></i>
+              <div>
+                <span class="block text-xs uppercase font-semibold text-white">Horário de Atendimento</span>
+                <span>Segunda a Sexta, das 08h às 18h</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Location -->
+        <div>
+          <h4 class="font-syne font-bold text-white text-base mb-6">Nossa Localização</h4>
+          <div class="space-y-4">
+            <p class="text-brandTextMuted text-sm leading-relaxed flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-brandSecondary mt-1 shrink-0"></i>
+              <span>Av. Paulista, 1000 - Bela Vista, São Paulo - SP, 01310-100</span>
+            </p>
+            <!-- Mock Interactive Mini Map placeholder styling -->
+            <div class="w-full h-24 rounded-lg bg-brandGray border border-white/10 flex items-center justify-center overflow-hidden relative group">
+              <div class="absolute inset-0 bg-cover bg-center opacity-40 transition-transform duration-500 group-hover:scale-110" style="background-image: url('assets/images/img_6.png');"></div>
+              <a href="https://maps.google.com" target="_blank" class="relative z-10 px-3 py-1 rounded bg-black/80 text-white text-[10px] font-bold uppercase tracking-wider border border-white/20 hover:bg-brandSecondary hover:text-black transition-colors" data-cursor-hover>Abrir Google Maps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-brandTextMuted text-xs">
+        <p>&copy; <span id="year"></span> Ativer Projetos e Soluções. Todos os direitos reservados.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-brandSecondary transition-colors">Termos de Uso</a>
+          <a href="#" class="hover:text-brandSecondary transition-colors">Política de Privacidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Widget Button -->
+  <a href="https://wa.me/5511999999999" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-all duration-300" data-cursor-hover aria-label="Fale conosco no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Lead/Budget Contact Modal -->
+  <div id="budget-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-xl opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="glass-panel w-full max-w-xl p-8 rounded-3xl border border-white/10 relative mx-4 max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brandPrimary hover:text-white transition-all text-lg" data-cursor-hover aria-label="Fechar Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <span class="text-xs font-semibold uppercase tracking-widest text-brandSecondary mb-2 block">// FALE CONOSCO</span>
+      <h3 class="font-syne font-bold text-2xl md:text-3xl text-white mb-6">Solicitar um Orçamento</h3>
+
+      <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+        <div>
+          <label for="name" class="block text-xs uppercase font-bold tracking-wider text-brandTextMuted mb-2">Nome Completo</label>
+          <input type="text" id="name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandSecondary transition-colors input-cursor" placeholder="Ex: João da Silva">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label for="company" class="block text-xs uppercase font-bold tracking-wider text-brandTextMuted mb-2">Empresa</label>
+            <input type="text" id="company" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandSecondary transition-colors input-cursor" placeholder="Ex: Indústria S/A">
+          </div>
+          <div>
+            <label for="phone" class="block text-xs uppercase font-bold tracking-wider text-brandTextMuted mb-2">Telefone Comercial</label>
+            <input type="tel" id="phone" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandSecondary transition-colors input-cursor" placeholder="Ex: (11) 99999-9999">
+          </div>
+        </div>
+
+        <div>
+          <label for="email" class="block text-xs uppercase font-bold tracking-wider text-brandTextMuted mb-2">E-mail Corporativo</label>
+          <input type="email" id="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandSecondary transition-colors input-cursor" placeholder="Ex: joao@empresa.com.br">
+        </div>
+
+        <div>
+          <label for="interest" class="block text-xs uppercase font-bold tracking-wider text-brandTextMuted mb-2">Qual o seu interesse?</label>
+          <select id="interest" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-brandTextMuted text-sm focus:outline-none focus:border-brandSecondary transition-colors input-cursor">
+            <option value="" disabled selected class="bg-brandDark text-white">Selecione uma opção...</option>
+            <option value="automacao" class="bg-brandDark text-white">Automação Industrial & CLPs</option>
+            <option value="tratamento" class="bg-brandDark text-white">Tratamento de Água (ETA/ETE)</option>
+            <option value="paineis" class="bg-brandDark text-white">Projetos & Painéis Elétricos</option>
+            <option value="suporte" class="bg-brandDark text-white">Suporte Técnico 24/7</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message" class="block text-xs uppercase font-bold tracking-wider text-brandTextMuted mb-2">Fale sobre seu projeto</label>
+          <textarea id="message" required rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brandSecondary transition-colors input-cursor" placeholder="Descreva brevemente sua necessidade..."></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brandPrimary to-brandSecondary text-white font-bold text-base shadow-[0_4px_25px_rgba(0,102,255,0.4)] hover:shadow-[0_4px_35px_rgba(0,212,255,0.6)] transition-all duration-300" data-cursor-hover>
+          Enviar Mensagem
+        </button>
+      </form>
+
+      <!-- Success Screen -->
+      <div id="form-success" class="absolute inset-0 bg-brandDark/95 backdrop-blur-md flex flex-col items-center justify-center text-center p-8 opacity-0 pointer-events-none transition-opacity duration-300 rounded-3xl">
+        <div class="w-16 h-16 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center text-green-400 text-3xl mb-6">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h4 class="font-syne font-bold text-2xl text-white mb-2">Mensagem Enviada!</h4>
+        <p class="text-brandTextMuted text-sm max-w-sm mb-6 leading-relaxed">Agradecemos o seu contato. Nossa equipe de engenharia altamente especializada retornará em até 2 horas úteis.</p>
+        <button onclick="closeModal()" class="px-6 py-2 rounded-full border border-white/10 text-white text-sm hover:border-brandSecondary transition-colors" data-cursor-hover>Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Details Modal -->
+  <div id="project-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 backdrop-blur-xl opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="glass-panel w-full max-w-4xl p-8 md:p-12 rounded-3xl border border-white/10 relative mx-4 max-h-[90vh] overflow-y-auto">
+      <button onclick="closeProjectModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brandPrimary hover:text-white transition-all text-lg" data-cursor-hover aria-label="Fechar Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 mt-4">
+        <!-- Visual/Image Column -->
+        <div class="lg:col-span-6 flex flex-col gap-4">
+          <div class="rounded-2xl overflow-hidden border border-white/10 h-72 lg:h-96">
+            <img id="modal-project-img" src="" alt="Imagem do Projeto" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <!-- Info Column -->
+        <div class="lg:col-span-6 flex flex-col justify-between">
+          <div>
+            <span id="modal-project-category" class="text-xs font-semibold uppercase tracking-widest text-brandSecondary mb-2 block"></span>
+            <h3 id="modal-project-title" class="font-syne font-bold text-2xl md:text-4xl text-white mb-6"></h3>
+            <p id="modal-project-desc" class="text-brandTextMuted text-sm md:text-base leading-relaxed font-light mb-8"></p>
+          </div>
+
+          <div class="space-y-6 pt-6 border-t border-white/10">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-brandTextMuted block mb-1">Tecnologias Utilizadas</span>
+                <span id="modal-project-techs" class="text-white text-xs font-semibold"></span>
+              </div>
+              <div>
+                <span class="text-[10px] uppercase font-bold text-brandTextMuted block mb-1">Retorno de Investimento (ROI)</span>
+                <span id="modal-project-roi" class="text-brandSecondary text-xs font-bold"></span>
+              </div>
+            </div>
+
+            <button onclick="closeProjectModal(); openModal();" class="w-full py-4 rounded-xl bg-gradient-to-r from-brandPrimary to-brandSecondary text-white font-bold text-sm shadow-[0_4px_25px_rgba(0,102,255,0.4)] hover:shadow-[0_4px_35px_rgba(0,212,255,0.6)] transition-all duration-300" data-cursor-hover>
+              Quero uma solução similar para minha empresa
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- External Script Dependencies (GSAP, Three.js, Lenis) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+  <!-- Application Logic JS -->
+  <script src="app.js"></script>
+</body>
+</html>
