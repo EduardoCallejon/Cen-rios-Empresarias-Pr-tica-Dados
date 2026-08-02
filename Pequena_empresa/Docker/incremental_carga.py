@@ -31,6 +31,7 @@ def _resultado_para_dataframe(resultado):
 
 
 def executar_etl(context=None):
+    _log(context, "🚀 Iniciando o pipeline de ETL incremental...")
     engine = obter_engine()
     ultima_quantidade = 0
 
@@ -50,8 +51,10 @@ def executar_etl(context=None):
                 resultado = conn.execute(text(f"SELECT * FROM public.{origem}"))
                 df = _resultado_para_dataframe(resultado)
                 df["data_carga"] = pd.Timestamp.now()
-                df.to_sql(destino, con=engine, if_exists="replace", index=False, schema="dw")
-                _log(context, f"Dimensao '{destino}' atualizada com sucesso!")
+                df.to_sql(
+                    destino, con=engine, if_exists="replace", index=False, schema="dw"
+                )
+                _log(context, f"📦 Dimensão '{destino}' atualizada com sucesso no DW!")
             else:
                 ultima_data = conn.execute(
                     text("SELECT MAX(data_venda) FROM dw.fato_vendas")
@@ -59,10 +62,16 @@ def executar_etl(context=None):
 
                 if ultima_data:
                     query = f"SELECT * FROM public.{origem} WHERE data_venda > '{ultima_data}'"
-                    _log(context, f"Buscando dados desde {ultima_data}")
+                    _log(
+                        context,
+                        f"🔍 Buscando novos registros de vendas desde {ultima_data}...",
+                    )
                 else:
                     query = f"SELECT * FROM public.{origem}"
-                    _log(context, "Carga inicial completa")
+                    _log(
+                        context,
+                        "🌱 Nenhuma venda anterior encontrada no DW. Executando carga inicial de vendas...",
+                    )
 
                 resultado = conn.execute(text(query))
                 df = _resultado_para_dataframe(resultado)
@@ -71,10 +80,20 @@ def executar_etl(context=None):
                 ultima_quantidade = len(df)
 
                 if not df.empty:
-                    df.to_sql(destino, con=engine, if_exists="append", index=False, schema="dw")
+                    df.to_sql(
+                        destino,
+                        con=engine,
+                        if_exists="append",
+                        index=False,
+                        schema="dw",
+                    )
 
-                _log(context, f"Tabela '{destino}' atualizada incrementalmente com sucesso!")
+                _log(
+                    context,
+                    f"📈 Tabela fato '{destino}' atualizada com {ultima_quantidade} novos registros!",
+                )
 
+    _log(context, "✅ Pipeline de ETL concluído com sucesso!")
     return {"novas_linhas": ultima_quantidade}
 
 
