@@ -1,11 +1,31 @@
-from dagster import Definitions, asset, define_asset_job, ScheduleDefinition
+from dagster import (
+    Definitions,
+    asset,
+    define_asset_job,
+    ScheduleDefinition,
+    Output,
+    MetadataValue,
+)
 
 from incremental_carga import executar_etl
 
 
-@asset(name="incremental_carga")
+@asset(
+    name="incremental_carga",
+    description="Executa o pipeline de ETL incremental carregando dados transacionais e atualizando as dimensões no DW.",
+)
 def incremental_carga_asset(context):
-    return executar_etl(context)
+    resultado = executar_etl(context)
+    novas_linhas = (
+        resultado.get("novas_linhas", 0) if isinstance(resultado, dict) else 0
+    )
+    return Output(
+        value=resultado,
+        metadata={
+            "novas_linhas_carregadas": MetadataValue.int(novas_linhas),
+            "status_execucao": MetadataValue.string("Sucesso"),
+        },
+    )
 
 
 incremental_carga_job = define_asset_job(

@@ -1,1 +1,1 @@
-from .assets import defs
+from .assets import defs as defs
