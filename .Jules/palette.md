@@ -1,0 +1,3 @@
+## 2025-03-03 - Operator and Developer Experience (DX) in Data Orchestration
+**Learning:** For backend systems and data engineering pipelines (like those managed by Dagster), the primary interface is the developer console logs and the orchestrator UI. Enhancing these with structured, visual markers (emojis, prefixes) and rich asset metadata makes monitoring, debugging, and operating pipelines vastly more intuitive and accessible for operators.
+**Action:** Enhance python console logs using distinct styling/emojis, and enrich Dagster assets with explicit metadata (e.g., loaded rows, targets) and detailed descriptions in the user's primary language (Portuguese).
