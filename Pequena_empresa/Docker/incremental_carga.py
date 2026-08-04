@@ -18,11 +18,12 @@ def obter_engine():
     return create_engine(url)
 
 
-def _log(context, message):
+def _log(context, message, emoji="ℹ️"):
+    formatted_message = f"{emoji} {message}"
     if context is not None:
-        context.log.info(message)
+        context.log.info(formatted_message)
     else:
-        print(message)
+        print(formatted_message)
 
 
 def _resultado_para_dataframe(resultado):
@@ -44,6 +45,8 @@ def executar_etl(context=None):
         "vendas": "fato_vendas",
     }
 
+    _log(context, "Iniciando processo ETL de Carga Incremental...", emoji="🚀")
+
     for origem, destino in tabelas_dimensao.items():
         with engine.begin() as conn:
             if origem != "vendas":
@@ -51,7 +54,7 @@ def executar_etl(context=None):
                 df = _resultado_para_dataframe(resultado)
                 df["data_carga"] = pd.Timestamp.now()
                 df.to_sql(destino, con=engine, if_exists="replace", index=False, schema="dw")
-                _log(context, f"Dimensao '{destino}' atualizada com sucesso!")
+                _log(context, f"Dimensão 'dw.{destino}' sincronizada com sucesso! (Total de registros: {len(df)})", emoji="🔄")
             else:
                 ultima_data = conn.execute(
                     text("SELECT MAX(data_venda) FROM dw.fato_vendas")
@@ -59,10 +62,10 @@ def executar_etl(context=None):
 
                 if ultima_data:
                     query = f"SELECT * FROM public.{origem} WHERE data_venda > '{ultima_data}'"
-                    _log(context, f"Buscando dados desde {ultima_data}")
+                    _log(context, f"Buscando novos registros de vendas posteriores a {ultima_data}", emoji="🔍")
                 else:
                     query = f"SELECT * FROM public.{origem}"
-                    _log(context, "Carga inicial completa")
+                    _log(context, "Iniciando Carga Inicial completa para fato_vendas", emoji="📥")
 
                 resultado = conn.execute(text(query))
                 df = _resultado_para_dataframe(resultado)
@@ -72,8 +75,13 @@ def executar_etl(context=None):
 
                 if not df.empty:
                     df.to_sql(destino, con=engine, if_exists="append", index=False, schema="dw")
+                    _log(context, f"Inseridos {ultima_quantidade} novos registros de vendas em 'dw.{destino}'", emoji="📥")
+                else:
+                    _log(context, "Nenhum registro novo de vendas encontrado para inserir", emoji="✨")
 
-                _log(context, f"Tabela '{destino}' atualizada incrementalmente com sucesso!")
+                _log(context, f"Tabela de fatos 'dw.{destino}' atualizada incrementalmente com sucesso!", emoji="✅")
+
+    _log(context, "Processo ETL finalizado com sucesso!", emoji="🎉")
 
     return {"novas_linhas": ultima_quantidade}
 
